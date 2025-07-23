@@ -11,3 +11,11 @@ def count_characters_occurrences(text):
         else:
             char_occurences_dict[char] = 1
     return char_occurences_dict
+
+def sort_on(items):
+    return items['count']
+
+def sort_dictionary(dictionary):
+    list_of_dicts = [{"char": key, "count": value} for key, value in dictionary.items()]
+    list_of_dicts.sort(key=sort_on, reverse=True)
+    return list_of_dicts
